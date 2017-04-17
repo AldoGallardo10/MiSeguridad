@@ -24,18 +24,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.sdsmdg.tastytoast.TastyToast;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import cl.mkt_technology.miseguridad.R;
 import cl.mkt_technology.miseguridad.adapter.AlertAdapter;
 import cl.mkt_technology.miseguridad.alert.SendAlert;
 import cl.mkt_technology.miseguridad.alert.Validate;
+import cl.mkt_technology.miseguridad.notification.Constants;
 
 
 public class MainActivity extends AppCompatActivity implements LocationListener, Validate{
@@ -78,8 +80,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                 String adress = direcciontv.getText().toString();
                 String lat = latitud.getText().toString();
                 String lon = longitud.getText().toString();
+                if (direcciontv.getText().equals("Direccion")){
+                    TastyToast.makeText(v.getContext(),"La alerta no fue enviada", Toast.LENGTH_SHORT,TastyToast.WARNING);
+                }else{
+                    new SendAlert(MainActivity.this).enviarAlert(adress,lat,lon);
+                }
 
-                new SendAlert(MainActivity.this).enviarAlert(adress,lat,lon);
             }
         });
 
@@ -88,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         recyclerView.setHasFixedSize(true);
         adapter = new AlertAdapter();
         recyclerView.setAdapter(adapter);
+        getNotification();
     }
 
 
@@ -209,5 +216,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
     @Override
     public void error() {
         TastyToast.makeText(this,"La alerta no fue enviada", Toast.LENGTH_SHORT,TastyToast.SUCCESS);
+    }
+
+    public static DatabaseReference getNotification(){
+        return FirebaseDatabase.getInstance().getReference(Constants.NOTIFICATION_KEY).push();
     }
 }

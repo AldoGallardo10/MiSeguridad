@@ -37,6 +37,7 @@ public class AlertAdapter extends FirebaseRecyclerAdapter<Alert,AlertAdapter.Ale
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                
                 Intent intent = new Intent(v.getContext(),MapsActivity.class);
                 intent.putExtra("longitud",longitud);
                 intent.putExtra("latitud",latitud);

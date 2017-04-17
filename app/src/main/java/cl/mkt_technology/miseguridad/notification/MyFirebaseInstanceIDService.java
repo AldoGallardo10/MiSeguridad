@@ -20,4 +20,3 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         reference.child("token").setValue(refreshToken);
     }
 }
-    
