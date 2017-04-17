@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+    android:background="@drawable/bg_white_underline_black"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/adressCustomTv"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:text="Direccion"
+            android:layout_width="0dp"
+            android:layout_weight="60"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/nameCustomTv"
+            android:text="Name"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>

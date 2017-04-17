@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "146967402276",
+    "firebase_url": "https://miseguridad-ee53e.firebaseio.com",
+    "project_id": "miseguridad-ee53e",
+    "storage_bucket": "miseguridad-ee53e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146967402276:android:2730efe4fc7d1637",
+        "android_client_info": {
+          "package_name": "cl.mkt_technology.miseguridad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146967402276-5l1m0g2kj49fq12i4c46ebe1dd0ev7c9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.mkt_technology.miseguridad",
+            "certificate_hash": "1c53df6f69588a12f4c3d3a8f6eab2c7150cd748"
+          }
+        },
+        {
+          "client_id": "146967402276-ricslsa3nr0fk5iq1ks73rrkrlbhj2b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9fmWEQZa9vrS6j6eYXm-q-HPnnmuT2Nk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146967402276-ricslsa3nr0fk5iq1ks73rrkrlbhj2b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
